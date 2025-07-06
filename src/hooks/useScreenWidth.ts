@@ -5,7 +5,7 @@ export const useScreenWidth = (): boolean => {
   console.log(isDesktop);
 
   const checkScreenWidth = () => {
-    setIsDesktop(window.innerWidth >= 1024);
+    setIsDesktop(window.innerWidth >= 768);
   };
 
   useEffect(() => {
