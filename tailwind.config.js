@@ -6,7 +6,18 @@ module.exports = {
     "./src/elements/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        beige: "#FBF6F0",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        gloock: ["GloockRegular", "serif"],
+      },
+      backgroundImage: {
+        gradientImage: "url('/static/gradient.png')",
+      },
+    },
   },
   plugins: [],
 };
