@@ -15,7 +15,7 @@ module.exports = {
         gloock: ["GloockRegular", "serif"],
       },
       backgroundImage: {
-        gradientImage: "url('/static/gradient.png')",
+        gradientImage: "url('/gradient.png')",
       },
     },
   },
