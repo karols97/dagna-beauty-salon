@@ -1,11 +1,20 @@
 import { useEffect, useState } from "react";
 
-export const useScreenWidth = (): boolean => {
-  const [isDesktop, setIsDesktop] = useState(false);
-  console.log(isDesktop);
+// TODO: do użycia też w TopBarze przy implementacji topBaru dla widoku desktopowego
+// TOREFACTOR: sprawdzić czy tu nie lepiej użyć prevState
+
+export enum ScreenMode {
+  desktop,
+  mobile,
+}
+
+export const useScreenWidth = (): ScreenMode | undefined => {
+  const [screenMode, setScreenMode] = useState<ScreenMode>();
 
   const checkScreenWidth = () => {
-    setIsDesktop(window.innerWidth >= 768);
+    if (window.innerWidth > 768) {
+      setScreenMode(ScreenMode.desktop);
+    } else setScreenMode(ScreenMode.mobile);
   };
 
   useEffect(() => {
@@ -15,5 +24,5 @@ export const useScreenWidth = (): boolean => {
     return () => window.removeEventListener("resize", checkScreenWidth);
   });
 
-  return isDesktop;
+  return screenMode;
 };
