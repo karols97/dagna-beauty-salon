@@ -20,12 +20,16 @@ const IndexPage: React.FC<PageProps> = () => {
           Desktop view
         </h1>
         <TopBar />
-        <section className="flex w-full bg-blue-200">
+        <section className="flex w-full">
           <Header />
         </section>
-        <section className="flex flex-row w-full">
-          <About />
-          <Gallery />
+        <section className="flex w-full bg-project-blue-200">
+          <div className="flex w-full">
+            <div className="flex w-full flex-row bg-project-beige-0">
+              <About />
+              <Gallery />
+            </div>
+          </div>
         </section>
         <section className="flex w-full">
           <Services />
@@ -34,7 +38,9 @@ const IndexPage: React.FC<PageProps> = () => {
           <Pricing />
           <Mobility />
         </section>
-        <Footer />
+        <section className="flex flex-row w-full">
+          <Footer />
+        </section>
       </div>
     );
   } else if (screenMode === ScreenMode.mobile) {
@@ -44,11 +50,15 @@ const IndexPage: React.FC<PageProps> = () => {
           Tablet or Mobile view
         </h1>
         <TopBar />
-        <section className="flex w-full bg-blue-200">
+        <section className="flex w-full">
           <Header />
         </section>
-        <section className="flex flex-row w-full">
-          <About />
+        <section className="flex w-full bg-project-blue-200">
+          <div className="flex w-full">
+            <div className="flex flex-col w-full bg-project-beige-0 items-center">
+              <About />
+            </div>
+          </div>
         </section>
         <section className="flex w-full">
           <Services />
@@ -62,7 +72,9 @@ const IndexPage: React.FC<PageProps> = () => {
         <section className="flex flex-row w-full">
           <Mobility />
         </section>
-        <Footer />
+        <section className="flex flex-row w-full">
+          <Footer />
+        </section>
       </div>
     );
   } else return <h1>Loading screen</h1>;
