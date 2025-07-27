@@ -8,7 +8,8 @@ import { Services } from "../elements/Services";
 import { Pricing } from "../elements/Pricing";
 import { Mobility } from "../elements/Mobility";
 import { Footer } from "../elements/Footer";
-import { TopBar } from "../elements/TopBar";
+import { TopBarMobile } from "../elements/TopBarMobile";
+import { TopBarDesktop } from "../elements/TopBarDesktop";
 
 const IndexPage: React.FC<PageProps> = () => {
   const screenMode = useScreenWidth();
@@ -16,19 +17,14 @@ const IndexPage: React.FC<PageProps> = () => {
   if (screenMode === ScreenMode.desktop) {
     return (
       <div>
-        <h1 className="text-lg p-1 border border-orange-600 rounded-sm m-1 bg-orange-200 text-orange-600">
-          Desktop view
-        </h1>
-        <TopBar />
-        <section className="flex w-full">
+        <TopBarDesktop />
+        <section className="flex w-full bg-project-blue-200">
           <Header />
         </section>
-        <section className="flex w-full bg-project-blue-200">
-          <div className="flex w-full">
-            <div className="flex w-full flex-row bg-project-beige-0">
-              <About />
-              <Gallery />
-            </div>
+        <section className="flex w-full h-[650px] bg-project-blue-200">
+          <div className="flex w-full flex-row bg-project-beige-0 rounded-bl-[48px]">
+            <About />
+            <Gallery />
           </div>
         </section>
         <section className="flex w-full">
@@ -46,18 +42,13 @@ const IndexPage: React.FC<PageProps> = () => {
   } else if (screenMode === ScreenMode.mobile) {
     return (
       <div>
-        <h1 className="text-lg p-1 border border-orange-600 rounded-sm m-1 bg-orange-200 text-orange-600">
-          Tablet or Mobile view
-        </h1>
-        <TopBar />
-        <section className="flex w-full">
+        <TopBarMobile />
+        <section className="flex w-full bg-project-blue-200">
           <Header />
         </section>
-        <section className="flex w-full bg-project-blue-200">
-          <div className="flex w-full">
-            <div className="flex flex-col w-full bg-project-beige-0 items-center">
-              <About />
-            </div>
+        <section className="flex w-full h-[407px] min-[400px]:h-[312px]  bg-project-blue-200">
+          <div className="flex flex-col w-full bg-project-beige-0 rounded-bl-[48px] items-center">
+            <About />
           </div>
         </section>
         <section className="flex w-full">

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TopBar = () => {
+export const TopBarMobile = () => {
   return (
     <div className="grid place-items-center bg-project-beige-0 cursor-pointer w-full h-[76px]">
       <h1 className="text-3xl">Dagna</h1>
