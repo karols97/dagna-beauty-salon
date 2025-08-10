@@ -12,7 +12,7 @@ export const useScreenWidth = (): ScreenMode | undefined => {
   const [screenMode, setScreenMode] = useState<ScreenMode>();
 
   const checkScreenWidth = () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 1280) {
       setScreenMode(ScreenMode.desktop);
     } else setScreenMode(ScreenMode.mobile);
   };
