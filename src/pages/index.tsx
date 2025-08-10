@@ -21,13 +21,13 @@ const IndexPage: React.FC<PageProps> = () => {
         <section className="flex w-full bg-project-blue-200">
           <Header />
         </section>
-        <section className="flex w-full h-[650px] bg-project-blue-200">
-          <div className="flex w-full flex-row bg-project-beige-0 rounded-bl-[48px]">
+        <section className="h-[650px] bg-project-blue-200">
+          <div className="flex w-full h-full flex-row justify-around bg-project-beige-0 rounded-bl-[48px]">
             <About />
             <Gallery />
           </div>
         </section>
-        <section className="flex w-full">
+        <section className="flex w-full bg-project-beige-0">
           <Services />
         </section>
         <section className="flex flex-row w-full">
@@ -46,19 +46,21 @@ const IndexPage: React.FC<PageProps> = () => {
         <section className="flex w-full bg-project-blue-200">
           <Header />
         </section>
-        <section className="flex w-full h-[407px] min-[400px]:h-[312px]  bg-project-blue-200">
+        <section className="flex w-full h-[407px] md:h-[360px] bg-project-blue-200">
           <div className="flex flex-col w-full bg-project-beige-0 rounded-bl-[48px] items-center">
             <About />
           </div>
         </section>
-        <section className="flex w-full">
+        <section className="flex w-full h-full bg-project-beige-0">
           <Services />
         </section>
-        <section className="flex flex-row w-full">
+        <section className="flex flex-row w-full bg-project-blue-200">
           <Pricing />
         </section>
-        <section className="flex flex-row w-full">
-          <Gallery />
+        <section className="flex w-full h-[642px] md:h-[768px] bg-project-beige-0">
+          <div className="flex flex-col w-full bg-project-blue-200 rounded-bl-[48px] items-center">
+            <Gallery />
+          </div>
         </section>
         <section className="flex flex-row w-full">
           <Mobility />

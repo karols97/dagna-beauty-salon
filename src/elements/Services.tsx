@@ -1,5 +1,9 @@
 import React from "react";
 
 export const Services = () => {
-  return <div className="p-2 border border-gray-300 m-1 cursor-pointer w-full">Services</div>;
+  return (
+    <div className="w-full h-[660px] md:h-[820px] xl:h-[500px] bg-project-blue-200 rounded-tr-[48px] rounded-bl-[48px]">
+      Services
+    </div>
+  );
 };
