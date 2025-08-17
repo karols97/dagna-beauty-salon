@@ -30,7 +30,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <section className="flex w-full bg-project-beige-0">
           <Services />
         </section>
-        <section className="flex flex-row w-full">
+        <section className="flex flex-row w-full bg-project-blue-200">
           <Pricing />
           <Mobility />
         </section>
@@ -62,7 +62,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <Gallery />
           </div>
         </section>
-        <section className="flex flex-row w-full">
+        <section className="flex flex-row w-full bg-project-blue-200">
           <Mobility />
         </section>
         <section className="flex flex-row w-full">
